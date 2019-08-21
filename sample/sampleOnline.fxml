@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="614.0" prefWidth="901.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.onlineController">
+   <children>
+      <ScrollPane prefHeight="384.0" prefWidth="225.0" styleClass="decrement-button" stylesheets="@style.css">
+         <content>
+            <FlowPane prefHeight="370.0" prefWidth="223.0" style="-fx-background-color: #202020;" stylesheets="@style.css" />
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="227.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="682.0" style="-fx-background-color: #202020;" stylesheets="@style.css">
+         <content>
+            <FlowPane prefHeight="506.0" prefWidth="678.0" style="-fx-background-color: #202020;" />
+         </content>
+      </ScrollPane>
+      <JFXTextField fx:id="searchBar1" focusColor="#9a0a27" layoutX="266.0" layoutY="14.0" prefHeight="26.0" prefWidth="266.0" styleClass="text-field1" stylesheets="@style.css" unFocusColor="#611028">
+         <effect>
+            <Glow />
+         </effect>
+      </JFXTextField>
+      <FontAwesomeIcon fx:id="searchBtn" fill="#4f1b2c" iconName="SEARCH" layoutX="547.0" layoutY="34.0" size="1.7em" />
+      <ImageView fx:id="imageViewO" fitHeight="139.0" fitWidth="218.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true" />
+      <FlowPane layoutY="570.0" prefHeight="38.0" prefWidth="266.0" />
+      <JFXSlider fx:id="sliderO" layoutX="346.0" layoutY="582.0" prefHeight="14.0" prefWidth="420.0" style="-fx-fill: #87053d;" styleClass="jfx-slider" stylesheets="@style.css" />
+      <Text fx:id="curTO" layoutX="292.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="41.3368032166436" />
+      <Text fx:id="totlTO" layoutX="789.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="41.33679961373673" />
+   </children>
+</AnchorPane>

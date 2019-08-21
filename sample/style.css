@@ -1,0 +1,86 @@
+
+-glyph-icon
+{
+    -fx-fill: red;
+}
+
+
+.scroll-pane {
+    -fx-background-color: black;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb
+{
+    -fx-background-color:#202020;
+}
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #411e2d;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: #202020;
+}
+
+
+.jfx-slider {
+    -jfx-default-thumb: #87053d;
+    -jfx-default-track: #AC9B94;
+}
+.jfx-slider .slider-value {
+    -fx-stroke:#87053d;
+    -fx-font-size: 0;
+}
+
+.jfx-slider1 {
+    -jfx-default-thumb: #4b082c;
+    -jfx-default-track: #AC9B94;
+}
+.jfx-slider1 .slider-value {
+    -fx-stroke:#AC9B94;
+    -fx-font-size: 0;
+}
+
+.button1
+{
+    -fx-background-color: #202020;
+    -fx-text-fill: #84737a;
+    -fx-text-origin: Ebrima;
+}
+
+.button2
+{
+    -fx-background-color: #3e1c27;
+    -fx-text-fill: #84737a;
+    -fx-text-origin: Ebrima;
+}
+
+.glyph-icon1
+{
+    -fx-fill: #861235;
+}
+.glyph-icon2
+{
+    -fx-fill: #4f1b2c;
+}
+
+.text-field1
+{
+    -fx-text-fill: #836D77;
+}

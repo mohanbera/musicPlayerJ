@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="gridPane" alignment="center" hgap="10" style="-fx-background-color: transparent;" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<HBox fx:id="pan" cacheShape="false" centerShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="848.0" scaleShape="false" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="pan1" cacheShape="false" centerShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="264.0" scaleShape="false" style="-fx-background-color: #202020; visibility: true;" HBox.hgrow="NEVER">
+            <children>
+               <ScrollPane fx:id="scrlPan1" layoutY="50.0" prefHeight="450.0" prefWidth="264.0" style="-fx-background-color: #202020;" styleClass="decrement-button" stylesheets="@style.css">
+                  <content>
+                     <FlowPane fx:id="flwPan1" prefHeight="450.0" prefWidth="262.0" style="-fx-background-color: #202020;" />
+                  </content>
+               </ScrollPane>
+               <JFXTextField fx:id="searchBarBtn1" focusColor="#9a0a27" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="193.0" styleClass="text-field1" stylesheets="@style.css" unFocusColor="#611028">
+                  <effect>
+                     <Glow />
+                  </effect>
+               </JFXTextField>
+               <FontAwesomeIcon fx:id="searchBtn" fill="#4f1b2c" iconName="SEARCH" layoutX="227.0" layoutY="35.0" onMouseClicked="#searchAction" size="1.7em" />
+            </children></Pane>
+      <Pane fx:id="pan2" cacheShape="false" centerShape="false" prefHeight="500.0" prefWidth="334.0" scaleShape="false" style="-fx-background-color: #202020;" HBox.hgrow="NEVER">
+         <children>
+            <ImageView fx:id="mediaImage1" fitHeight="197.0" fitWidth="334.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@beats-music-logo-0121.png" />
+               </image>
+            </ImageView>
+            <FontAwesomeIcon fx:id="setBtn1" fill="#87053d" iconName="BARS" layoutX="4.0" layoutY="22.0" onMouseClicked="#settingBtnAction" size="2em" />
+            <FontAwesomeIcon fx:id="closeBtn1" fill="#87053d" iconName="CLOSE" layoutX="310.0" layoutY="22.0" onMouseClicked="#closeBtnAction2" size="2em" />
+               <FontAwesomeIcon fx:id="pauseBtn" fill="#611028" iconName="PAUSE" layoutX="157.0" layoutY="415.0" onMousePressed="#pauseAction" size="2em" />
+               <FontAwesomeIcon fx:id="nextBtn" fill="#611028" iconName="ARROW_CIRCLE_O_RIGHT" layoutX="236.0" layoutY="415.0" onMousePressed="#nextAction" size="2.3em" />
+               <FontAwesomeIcon fx:id="preBtn" fill="#611028" iconName="ARROW_CIRCLE_O_LEFT" layoutX="75.0" layoutY="414.0" onMousePressed="#prevAction" selectionFill="#f5f1f1" size="2.3em" />
+               <Label layoutX="119.0" layoutY="224.0" prefHeight="24.0" prefWidth="117.0" text="Now Playing" textFill="#84737a">
+                  <font>
+                     <Font size="17.0" />
+                  </font>
+               </Label>
+               <JFXSlider fx:id="slider1" layoutX="39.0" layoutY="355.0" onMouseDragged="#sliderAction1" onMousePressed="#sliderAction1" onMouseReleased="#sliderAction1" onScroll="#sliderAction1" onScrollFinished="#sliderAction1" onScrollStarted="#sliderAction1" prefHeight="14.0" prefWidth="257.0" style="-fx-fill: #87053d;" styleClass="jfx-slider" stylesheets="@style.css" />
+               <Label fx:id="timeLbl1" layoutX="2.0" layoutY="349.0" prefHeight="26.0" prefWidth="36.0" text="00 : 00" textFill="#84737a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Label fx:id="timeLbl2" layoutX="300.0" layoutY="349.0" prefHeight="26.0" prefWidth="36.0" text="00 : 00" textFill="#84737a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Label fx:id="songNmLbl1" layoutX="36.0" layoutY="250.0" prefHeight="26.0" prefWidth="292.0" textFill="#84737a">
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+               </Label>
+               <FontAwesomeIcon fill="#8a1c3f" iconName="MUSIC" layoutX="4.0" layoutY="271.0" size="2em" />
+               <FontAwesomeIcon fx:id="mimMzBtn" fill="#87053d" iconName="MINUS" layoutX="284.0" layoutY="25.0" onMouseClicked="#minMzBtnAction1" size="2em" wrappingWidth="18.85714340209961" />
+               <FontAwesomeIcon fx:id="repeatBtn1" fill="#4f1b2c" iconName="REPEAT" layoutX="26.0" layoutY="469.0" onMouseClicked="#reapeatAction" size="1.7em" />
+               <FontAwesomeIcon fx:id="muteBtn1" fill="#4f1b2c" iconName="BELL_SLASH" layoutX="85.0" layoutY="470.0" onMouseClicked="#MuteAction1" size="1.7em" text="" />
+               <FontAwesomeIcon fx:id="suffleBtn1" fill="#4f1b2c" iconName="RANDOM" layoutX="155.0" layoutY="470.0" onMouseClicked="#suffleAction1" size="1.7em" text="" />
+               <FontAwesomeIcon fill="#4f1b2c" iconName="CLOUD_UPLOAD" layoutX="220.0" layoutY="469.0" size="1.7em" />
+               <FontAwesomeIcon fill="#4f1b2c" iconName="HEART" layoutX="281.0" layoutY="469.0" size="1.7em" />
+         </children>
+      </Pane>
+      <Pane fx:id="pan3" cacheShape="false" centerShape="false" prefHeight="500.0" prefWidth="250.0" scaleShape="false" style="-fx-background-color: #202020; visibility: true;" HBox.hgrow="NEVER">
+         <children>
+            <Label layoutX="18.0" layoutY="26.0" prefHeight="24.0" prefWidth="101.0" text="Media List" textFill="#8f0d45">
+               <font>
+                  <Font name="Ebrima" size="15.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="medLstOnBtn1" layoutX="157.0" layoutY="9.0" onAction="#mediaOnAction" prefHeight="58.0" prefWidth="54.0" text=" " textFill="#af1244" toggleColor="#aa0c4b" toggleLineColor="#7f0b41" unToggleColor="#920f46" unToggleLineColor="#57213d" />
+               <Label layoutX="18.0" layoutY="67.0" prefHeight="24.0" prefWidth="101.0" text="Import songs" textFill="#8f0d45">
+                  <font>
+                     <Font name="Ebrima" size="15.0" />
+                  </font>
+               </Label>
+               <JFXButton fx:id="importBtn" layoutX="157.0" layoutY="67.0" onAction="#importBtnAction" prefHeight="25.0" prefWidth="73.0" ripplerFill="#c22466" style="-fx-background-color: #57213d;" text="Import" textFill="#84737a" />
+               <JFXSlider fx:id="volumeSlider" layoutX="14.0" layoutY="120.0" onMouseReleased="#volumeAction1" prefHeight="14.0" prefWidth="223.0" style="-fx-fill: #87053d " styleClass="jfx-slider1" stylesheets="@style.css" />
+               <JFXButton layoutX="94.0" layoutY="145.0" prefHeight="25.0" prefWidth="73.0" ripplerFill="#8a1c3f" style="-fx-background-color: #57213d;" text="Volume" textFill="#716b6b" />
+               <Label layoutX="18.0" layoutY="187.0" prefHeight="24.0" prefWidth="101.0" text="Online player" textFill="#8f0d45">
+                  <font>
+                     <Font name="Ebrima" size="15.0" />
+                  </font>
+               </Label>
+               <JFXToggleButton fx:id="onlinePlayBtn" layoutX="157.0" layoutY="170.0" onAction="#onlinePlayAction" prefHeight="58.0" prefWidth="54.0" text=" " textFill="#af1244" toggleColor="#aa0c4b" toggleLineColor="#7f0b41" unToggleColor="#920f46" unToggleLineColor="#57213d" />
+               <JFXToggleButton fx:id="newPageBtn" layoutX="70.0" layoutY="264.0" onAction="#newPageAction" prefHeight="58.0" prefWidth="54.0" text=" " textFill="#af1244" toggleColor="#aa0c4b" toggleLineColor="#7f0b41" unToggleColor="#920f46" unToggleLineColor="#57213d" />
+         </children>
+      </Pane>
+   </children>
+</HBox>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
