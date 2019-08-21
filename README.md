@@ -8,6 +8,6 @@ A java desktop application for playing musics.
 
 ![](https://github.com/mohanbera/musicPlayerJ/blob/master/META-INF/Screenshot%20(55).png)
 
-<h2> minimize view </h2>
+<h2> Minimized view </h2>
 
 ![](https://github.com/mohanbera/musicPlayerJ/blob/master/META-INF/Screenshot%20(56).png)
